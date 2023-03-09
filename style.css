@@ -1,0 +1,26 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    width: 60vh;
+    margin: auto;
+}
+
+.slider{
+    height: 70vh;
+    margin-top: 20vh;
+}
+
+.image-wrapper{
+    height: 100%;
+    display: none;
+}
+
+.image{
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
