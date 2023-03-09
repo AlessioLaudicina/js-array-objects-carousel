@@ -47,6 +47,8 @@ for (let i = 0; i < imagesArray.length; i++) {
        
     }
     const newImageWrapper = `<div class="image-wrapper">
+    <h3>${imageArray.title}</h3>
+    <p>${imageArray.text}</p>
     <img class="image" src="${imageArray.image}" />
 </div>`;
 
