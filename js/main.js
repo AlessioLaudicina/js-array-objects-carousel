@@ -44,17 +44,17 @@ for (let i = 0; i < imagesArray.length; i++) {
     const imageArray = imagesArray[i]
     for(let key in imageArray){
         console.log(imageArray[key])
-        const newImageWrapper = `<div class="image-wrapper">
-                                <img class="image" src="${imageArray.image}" />
-                            </div>`;
-
-    const newThumb =    `<div class="thumb-wrapper">
-                            <img class="thumb-img" src="${imageArray.image}" />
-                        </div>`;
-    sliderContent += newImageWrapper;       
-    thumbContent += newThumb;
+       
     }
-    
+    const newImageWrapper = `<div class="image-wrapper">
+    <img class="image" src="${imageArray.image}" />
+</div>`;
+
+const newThumb =    `<div class="thumb-wrapper">
+<img class="thumb-img" src="${imageArray.image}" />
+</div>`;
+sliderContent += newImageWrapper;       
+thumbContent += newThumb;
 }
 
 imageListDom.innerHTML = sliderContent;
@@ -98,7 +98,7 @@ nextDom.addEventListener('click',
 
 prevDom.addEventListener('click', 
     function() {
-        //if (activeImage > 0) {
+        if (activeImage > 0) {
 
             imagesWrapperDom[activeImage].classList.remove('show');
             thumbsDom[activeImage].classList.remove('active');
@@ -119,6 +119,6 @@ prevDom.addEventListener('click',
                 }
             
 
-        //}
+        }
     }
 );
