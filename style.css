@@ -24,6 +24,19 @@
 .image-wrapper {
     height: 100%;
     display: none;
+    position: relative;
+}
+
+.title{
+    color: white;
+    position: absolute;
+    bottom: 80px;
+}
+
+.text{
+    position: absolute;
+    bottom: 20px;
+    color: white;
 }
 
 .image {
