@@ -42,19 +42,18 @@ let thumbContent = "";
 // scorro l'array delle immagini e creo il codice html necessario alla stampa sulla pagina web
 for (let i = 0; i < imagesArray.length; i++) {
     const imageArray = imagesArray[i]
-    for(let key in imageArray){
-        console.log(imageArray[key])
-       
-    }
+    
     const newImageWrapper = `<div class="image-wrapper">
     <img class="image" src="${imageArray.image}" />
     <h3 class="title">${imageArray.title}</h3>
     <p class="text">${imageArray.text}</p>
 </div>`;
 
+
 const newThumb =    `<div class="thumb-wrapper">
 <img class="thumb-img" src="${imageArray.image}" />
 </div>`;
+
 sliderContent += newImageWrapper;       
 thumbContent += newThumb;
 }
@@ -121,3 +120,19 @@ prevDom.addEventListener('click',
         }
     }
 );
+
+
+let clock = setInterval(function(){
+    imagesWrapperDom[activeImage].classList.remove('show');
+            thumbsDom[activeImage].classList.remove('active');
+
+            if (activeImage == imagesWrapperDom.length -1) {
+                activeImage = 0;
+            } else {
+                activeImage = activeImage + 1;
+            }
+
+            imagesWrapperDom[activeImage].classList.add('show');
+            thumbsDom[activeImage].classList.add('active');
+
+},10000)

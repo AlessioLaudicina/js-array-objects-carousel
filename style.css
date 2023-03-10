@@ -30,13 +30,18 @@
 .title{
     color: white;
     position: absolute;
-    bottom: 80px;
+    bottom: 60px;
+    padding: 10px;
+    text-shadow: 1px 1px black;
 }
 
 .text{
     position: absolute;
     bottom: 20px;
     color: white;
+    padding: 10px;
+    text-shadow: 1px 1px black;
+
 }
 
 .image {
